@@ -1,0 +1,106 @@
+Cara
+
+
+Search Drive
+
+Drive
+.
+Folder Path
+My Drive
+1 Clients
+1 EOYDC Design Strategy
+Mapping Project
+Visual Impact Site
+css
+NEW 
+Folders and views
+My DriveCollapsed
+Shared with me
+Google Photos
+Recent
+Starred
+Trash
+Name
+Owner
+Last modified
+File size
+
+bootstrap.css
+me
+Dec 9, 2014me
+117 KB
+Not selected
+
+sequences.css
+me
+Jun 13, 2015me
+759 bytes
+Selected
+
+stylish-portfolio.css
+me
+Jun 13, 2015me
+5 KB
+Not selected
+Get Drive for Mac
+16 GB of 100 GB used
+Upgrade storage
+
+body {
+    font-family:'Open Sans', sans-serif;
+    font-size: 2.5em;
+    font-weight: 400;
+    width: 800px;
+    height: 700px;
+    margin-top: 10px;
+    position: top;
+}
+#main {
+    float: left;
+    width: 650px;
+}
+#sidebar {
+    float: right;
+    width: 70px;
+}
+
+#sequence {
+    width: 400px;
+    height: 70px;
+}
+
+#legend {
+    padding: 5px 0 0 3px;
+    position: relative;
+}
+
+#sequence text, #legend text {
+    font-size: 11px;
+    font-weight: 500;
+    fill: #fff;
+}
+
+#chart {
+    position: relative;
+}
+
+#chart path {
+    stroke: #fff;
+}
+
+#explanation {
+    position: absolute;
+    top: 260px;
+    left: 355px;
+    width: 70px;
+    text-align: center;
+    color: #666;
+    z-index: 10;
+    
+}
+
+
+#percentage {
+    font-size: 2.5em;
+    color: #666666;
+}
