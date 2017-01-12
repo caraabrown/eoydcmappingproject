@@ -1,0 +1,101 @@
+
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+ 	var data = google.visualization.arrayToDataTable([
+	  ['Insdustries', 'Percentages'],
+	  ['Hospitality & Dining', 0.5],
+          ['Retail', 0.5],
+          ['Social Services', 0.5],
+          ['Theology', 0.5],
+          ['Other', 0.5],
+          ['Culinary', 1],
+          ['Fashion', 1],
+          ['International', 1],
+          ['Military & Defense', 1],
+          ['Real Estate', 1.0],
+          ['Communications', 1.5],
+          ['Science', 1.5],
+          ['Tech', 1.5],
+          ['Transportation', 1.5],
+          ['Construction & Development', 2],
+          ['Banking & Finance', 3],
+          ['Law Enforecement', 3],
+          ['Government', 3],
+          ['Arts', 4.4],
+          ['Law', 1.5],
+          ['Entertainment', 6.4],
+          ['General Service', 6.4],
+          ['Healthcare & Pharmaceuticals', 9.9],
+          ['Business', 10.3],
+          ['Education', 10.3],
+          ['Non Profit', 11.3],
+          ['Athletics', 14.8],
+          ['Enviornmental', 1],
+        ]);
+
+        // Set chart options
+        var options = {'title':'Participant Employment by Industry',
+        pieHole: 0.5,
+        ['#22BCEA',
+'#0099EA', 
+'#006699', 
+'#206465',
+'#006666',
+'#339999', 
+'#339966', 
+'#339900', 
+'#33CC00', 
+'#66CC00', 
+'#66FF00', 
+'#33FF33', 
+'#99FF66', 
+'#CCFF00', 
+'#99FF00', 
+'#66FF99', 
+'#33FF99',
+'#66FFCC', 
+'#99FFFF', 
+'#99CCFF',
+'#0000CC',
+'#000099', 
+'#0000FF',
+'#330066',
+'#0099FF',
+'#6666CC',
+'#66CCFF'], // change colors in order of category
+        pieSliceText:'label', // get rid of text 
+        pieStartAngle:70, // change the angle
+        width:1000, // change the width 
+        tooltip: { text:'percentage'}, 
+
+        };
+
+        //, Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="donutchart" style="width: 940px; height: 780px;"></div>
+                       
+  </body>
+</html>

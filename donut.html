@@ -1,0 +1,103 @@
+<html>
+<head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+ 	var data = google.visualization.arrayToDataTable([
+	  ['Insdustries', 'Percentages'],
+	  ['HOSPITALITY & DINING', 0.5],
+          ['RETAIL', 0.5],
+          ['SOCIAL SERVICES', 0.5],
+          ['THEOLOGY', 0.5],
+          ['OTHER', 0.5],
+          ['CULINARY', 1],
+          ['ENVIORNMENTAL', 1],
+          ['FASHION', 1],
+          ['INTERNATIONAL', 1],
+          ['MILITARY & DEFENSE', 1],
+          ['REAL ESTATE', 1.0],
+          ['LAW', 1.5],
+          ['COMMUNICATIONS', 1.5],
+          ['SCIENCE', 1.5],
+          ['TECH', 1.5],
+          ['TRANSPORTATION', 1.5],
+          ['CONSTRUCTION & DEVELOPMENT', 2],
+          ['BANKING & FINANCE', 3],
+          ['LAW ENFORCEMENT', 3],
+          ['GOVERNMENT', 3],
+          ['THE ARTS', 4.4],
+          ['ENTERTAINMENT', 6.4],
+          ['GENERAL SERVICES', 6.4],
+          ['HEALTHCARE & PHARMACEUTICALS', 9.9],
+          ['BUSINESS', 10.3],
+          ['EDUCATION', 10.4],
+          ['NON PROFIT', 11.3],
+          ['ATHLETICS', 14.8],
+        ]);
+       
+
+        // Set chart options
+     
+       var options = {'title':'pie chart',
+       legend: 'none',
+        pieHole: 0.4,
+        colors:['#99CCFF',
+                '#0099EA', 
+                '#006699', 
+                '#206465',
+                '#006666',
+                '#339999', 
+                '#339966', 
+                '#339900', 
+                '#33CC00', 
+                '#66CC00', 
+                '#66FF00', 
+                '#33FF33', 
+                '#99FF66', 
+                '#CCFF00', 
+                '#99FF00', 
+                '#66FF99', 
+                '#33FF99',
+                '#66FFCC', 
+                '#22BCEA', 
+                '#0099EA', //GOV
+                '#3366FF', //ART
+                '#0000FF', //ENT
+                '#0000CC', //GEN
+                '#000099', //HEA
+                '#330066', //BUS
+                '#6600CC', //EDU
+                '#9999FF'],//NON colors in order of category
+        pieSliceText:'label', // get rid of text 
+        pieStartAngle:70, // change the angle
+        width:900, // change the width
+        tooltip: { text:'percentage'}, 
+        chartArea:{left:10,top:10,width:'75%',height:'75%'},
+        titleTextStyle:{color: 'black', fontSize: 10}
+        };
+
+        //, Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="donutchart" style="width: 600px; height: 580px;"></div>
+  </body>
+</html>
