@@ -1,2 +1,2 @@
 # eoydcmappingproject
-http://caraabrown.github.io/eoydcmappingproject.
+http://caraabrown.github.io/eoydcmappingproject
